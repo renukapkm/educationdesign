@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dango project2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel="stylesheet" href="mystyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Magra' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- <div>
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT</a>
+        <a href="/services">SERVICES</a>
+    </div>  -->
+    <nav class="navbar navbar-expand-lg navbar-dark   na ">
+        <div class="container-fluid">
+          <a class="navbar-brand a" href="javascript:void(0)">Study Sphere</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="mynavbar">
+            <ul class="navbar-nav me-auto mx-auto ">
+              <li class="nav-item  ">
+                <a class="nav-link a" href="/">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a" href="/about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a" href="/contact">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a" href="/course">COURSE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link a" href="/services">SERVICES</a>
+              </li>
+              
+            </ul>
+            <div class="d-flex">
+              <!-- {% if "user" not in request.session %} -->
+              <!-- <input class="form-control me-2" type="text" placeholder="Search"> -->
+              <a href="/registration"><button class="btn btn-warning text-light m-1" type="button" >SIGN UP</button></a>
+              <a href="/login"><button class="btn btn-warning text-light m-1" type="button">SIGN IN</button></a>
+              <!-- {% else %} -->
+              <a href="/logout"><button class="btn btn-warning text-light m-1" type="button">LOGOUT</button></a>
+            </div>
+            <!-- {% endif %} -->
+          </div>
+        </div>
+      </nav>
+      <body>
+        <!-- Swiper -->
+         
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+          centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+          
+          <swiper-slide><img src=" back.jpg" alt=""></swiper-slide>
+          <swiper-slide><img src=" backg1.webp" alt=""></swiper-slide>
+          <swiper-slide><img src=" backg4.webp" alt=""></swiper-slide>
+          <swiper-slide><img src=" backg3.webp" alt=""></swiper-slide>
+          <swiper-slide><img src=" rooms1.jpg" alt=""></swiper-slide>
+          <swiper-slide><img src=" back1.webp" alt=""></swiper-slide>
+          <swiper-slide><img src=" rooms.jpg" alt=""></swiper-slide>
+          
+          <div class="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+        </swiper-container>
+        
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+        
+        
+        <!-- Initialize Swiper -->
+        <script>
+          const progressCircle = document.querySelector(".autoplay-progress svg");
+          const progressContent = document.querySelector(".autoplay-progress span");
+        
+          const swiperEl = document.querySelector("swiper-container");
+          swiperEl.addEventListener("autoplaytimeleft", (e) => {
+            const [swiper, time, progress] = e.detail;
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          });
+        </script>
+      <section class="admission">
+        <div class="containeer">
+          <div class="row " style="background-color: #fffdfd;">
+            <div class="col-xl-4 col-lg-4 col-sm-6 p-3">
+              <div class="box6 " >
+                <img src="group1.jpg" alt="" width="100%" >
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-sm-6 ">
+              <div class="box9  ">
+                  <h3 style="color: rgb(231, 181, 17);">ADMISSION OPEN</h3>
+                  <H6 style="color: rgb(165, 128, 6);">FOR THE  2024-2025 ACADEMIC YEAR</H6>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-sm-6 mt-2">
+              <div class="box6">
+                <img src="edu1.png.png" alt="" width="100%">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      
+       <section class="num">
+        <div class="containeer">
+          <div class="row text-center p-4">
+            <div class="col-xl-3 col-lg-4 col-sm-6 ">
+              <div class="box8">
+                <img src="colhome.png" alt="" width="20%">
+                <br>
+                 <span class="text-light purecounter h1" data-purecounter-start="0" data-purecounter-end="100" >0</span><span class="text-light h1">+</span>
+                 <!-- <h1 class="text-light purecounter" data-purecounter-end:100>100</h1> -->
+               
+                <!-- <h1 id="myTargetElement" title="Counting up to a billion">0</h1> -->
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="box8">
+                <img src="colloca.png" alt="" width="20%">
+                <br>
+                <span class="text-light purecounter  h1" data-purecounter-start="0" data-purecounter-end="80" >0</span>
+                <span class="text-light h1">+</span>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="box8">
+                <img src=" book.png" alt="" width="20%">
+                <br>
+                <span class="text-light purecounter  h1" data-purecounter-start="0" data-purecounter-end="65" >0 </span>
+                <span class="text-light h1">+</span>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="box8">
+                <img src="scolarship.png" alt="" width="20%">
+                <br>
+                <span class="text-light purecounter h1" data-purecounter-start="0" data-purecounter-end="100" >0</span>
+                <span class="text-light h1">+</span>
+              </div>
+            </div>
+      
+      
+          </div>
+        </div>
+      </section> 
+      
+      <script>
+        new PureCounter({
+        // Setting that can't' be overriden on pre-element
+        selector: ".purecounter", // HTML query selector for spesific element
+      
+        // Settings that can be overridden on per-element basis, by `data-purecounter-*` attributes:
+        start: 0, // Starting number [uint]
+        end: 100, // End number [uint]
+        duration: 10, // The time in seconds for the animation to complete [seconds]
+        delay: 5, // The delay between each iteration (the default of 10 will produce 100 fps) [miliseconds]
+        once: true, // Counting at once or recount when the element in view [boolean]
+        pulse: false, // Repeat count for certain time [boolean:false|seconds]
+        decimals: 0, // How many decimal places to show. [uint]
+        legacy: true, // If this is true it will use the scroll event listener on browsers
+        filesizing: false, // This will enable/disable File Size format [boolean]
+        currency: false, // This will enable/disable Currency format. Use it for set the symbol too [boolean|char|string]
+        formater: "us-US", // Number toLocaleString locale/formater, by default is "en-US" [string|boolean:false]
+        separator: false // This will enable/disable comma separator for thousands. Use it for set the symbol too [boolean|char|string]
+      });
+      
+      </script>  
+
+<div class="box p-4" style="background-color: beige;">
+    <h4 class="text-center" style="color: rgb(5, 5, 5);">Students Testimonials</h4>
+    <p class="text-center">Feedback From Student</p>
+    
+
+<marquee behavior="scroll" direction="left" scrollamount="5">
+  <div class="marquee-container">
+      <div>
+          <p>Teaching staff members in our college are very helpful and qualified. They try their best to bring the best in students. Teachers express their point of view by conducting various presentation and activities where students grasp quickly and give output in their submissions.</p>
+          <span class="h4"><img src="stu.jpg" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; Sophia Davis</span>
+          
+      </div>
+      <div>
+          <p>Professors are teaching friendly. The teaching faculty is experienced and quality education is provided by the college. Professors are very friendly and helpful in nature and provide the best study material for the examination. The college staff is very hardworking for the welfare of the students.</p>
+          <span class="h4"><img src="stu2.png" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; William Lee</span>
+      </div>
+      <div>
+          <p>We got all the Leading companies to our campus. The college placement is good at all as they provides you the different opportunities and almost each student got placement through the campus drives and they also offered a good level of salary. Our college was also supportive and helpful.</p>
+          <span class="h4"><img src="stu1.webp" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; Olivia Brown</span>
+      </div>
+      <!-- <div>
+        <p>Our college provides good facilities in classrooms, and it provides digital video. Our college provides quality education for students. Labs are good. Hostel facility is available, and a good number of students stay in hostels. Students get a good quality of food. </p>
+        <span class="h4"><img src="stu3.jpg" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; Charlotte Wilson</span>
+    </div> -->
+    <div>
+      <p>Best faculty and facilities I have ever seen. I choose a private hostel which was well-maintained and not as costly. My college life was my dream, and I loved having it. There were labs and a library with Wi-Fi. There was more practical knowledge. You can become what you want. </p>
+      <span class="h4"><img src="stu4.jpg" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; Amelia Miller</span>
+  </div>
+      <!-- <div>
+          <p>This is a long paragraph for div 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+          <h4 class="text-light">renu  <img src="{% static 'avat.jpg' %}" alt="" width="20%" style="border-radius: 50%;" >
+          </h4>
+      </div> -->
+      <div>
+          <p>It's very easy to clear semester exams. Even though it's a tough syllabus, it becomes easier because of our faculty members. Our faculty members prepare materials and keynotes so that we lessen the burden of our students. They are more. focused and very consistent in their work.</p>
+          <span class="h4"><img src="stu5.jpg" alt="" width="20%"  style="border-radius: 50%; "> &nbsp;&nbsp; James Anderson</span>
+      </div>
+  </div>
+</marquee>
+</div>
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container-fluid my-5">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #45526e"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                HEAD OFFICE
+              </h6>
+              <p>
+                <i class="bi bi-house-door-fill"></i> New York, NY 10012, US
+              </p>
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                BRANCH OFFICE
+              </h6>
+              <p>
+                Bengaluru City | Silicon Valley of India | karnataka 
+ 
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold"> CONTACT</h6>
+              <p>
+                <a class="text-white"><i class="bi bi-phone"></i> + 01 234 567 89</a>
+              </p>
+              <p>
+                <a class="text-white "><i class="bi bi-telephone-fill"></i> + 01 234 567 88</a>
+              </p>
+              <p>
+                <a class="text-white"><i class="bi bi-envelope-fill"></i>  studysphere@gmail.com</a>
+              </p>
+              <!-- <p>
+                <a class="text-white">Bootstrap Angular</a>
+              </p> -->
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                SOCIAL MEDIAS 
+              </h6>
+              <p>
+                <a href="https://www.instagram.com/" class="text-white"><i class="bi bi-instagram"></i> studysphere.in </a>
+                <!-- <a class="text-white">Your Account</a> -->
+              </p>
+              <p>
+                <a href="https://www.facebook.com/ " class="text-white"><i class="bi bi-facebook"></i> studysphere  </a>
+                <!-- <a class="text-white">Become an Affiliate</a> -->
+              </p>
+              <p>
+                <a href="https://www.linkedin.com/" class="text-white"><i class="bi bi-linkedin"></i> studysphere Edu</a>
+                <!-- <a class="text-white">Shipping Rates</a> -->
+              </p>
+             
+            </div>
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-center">
+              <h6 class="text-uppercase mt-5 font-weight-bold">
+                study sphere</h6>
+              
+            </div>
+            
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+  
+        <hr class="my-3">
+  
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-12 col-lg-12 text-center text-center">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2024 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/"
+                   >studysphere.com</a
+                  >
+              </div>
+              <!-- Copyright -->
+            </div>
+           
+          </div>
+        </section>
+        
+      </div>
+      
+    </footer>
+    <!-- Footer -->
+  </div>
+
+<section>
+    <div class="container">
+        <div class="row p-3">
+            <div class="col-sm-6 text-center mx-auto">
+                <div class="lastline">
+                    <button class="btn btn-warning">Click  Here to view the full project link.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ 
+</body>
+</html>
